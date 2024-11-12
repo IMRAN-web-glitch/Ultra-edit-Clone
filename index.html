@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+    <style>
+        * {
+            text-transform: capitalize;
+
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            font-style: normal;
+
+        }
+
+        .nav {
+            display: flex;
+            width: 90vw;
+            display: flex;
+            justify-content: center;
+
+
+
+        }
+
+        .items {
+            margin: 10px 40px;
+            width: 320px;
+
+        }
+
+        .list ul li {
+            list-style: none;
+            margin-top: 15px;
+            margin-left: 40px;
+            font-size: medium;
+        }
+
+        ul {
+            display: flex;
+
+        }
+
+        .main {
+            
+            font-size: 25px;
+            justify-content: center;
+            width: 80vw;
+            margin: 50px auto;
+
+        }
+
+        button {
+            background-color: rgb(74, 192, 255);
+            display: flex;
+            justify-items: center;
+            color: white;
+            width: 300px;
+            height: 50px;
+            place-content: center;
+            align-items: center;
+            font-weight: 600;
+            font-size: large;
+           border: 1px;
+           border-radius: 10px;
+            
+
+        }
+
+        .button {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+           
+
+        }
+
+        .downlaod {
+            display: flex;
+            justify-content: center;
+            font-size: 50px;
+           
+        }
+
+        .para {
+            margin-top: 50px;
+            text-overflow: ellipsis;
+            text-align: center;
+           
+            
+
+        }
+        .image{
+            position: relative;
+            top: 19px;
+        }
+        .info{
+            margin-left: 10vw;
+            display: flex;
+            margin-bottom: 3vw;
+            margin-top: 9vw;
+        }
+        .info h5{
+            /* padding: 15px; */
+            margin: 15px;
+            font-size: 25px;
+        }
+        h6{
+            font-size: 10px;
+            position: relative;
+            top: 6px;
+        }
+        .grid{
+           
+            display: grid;
+            grid-template-rows: 15vw 15vw 15vw;
+            grid-template-columns: 25vw 25vw 25vw;
+            text-align: center;
+            gap: 10px;
+            place-content: center;
+            
+
+        }
+        .item{
+            background-color: #f9f9f9;
+            width: 23vw;
+            height: 13vw;
+            margin-top: 10px;
+            
+           
+           
+        }
+        .lg {
+            font-weight: 700;
+            font-size: larger;
+        }
+        .hello{
+            font-size: small;
+        }
+        a{
+            font-size: small;
+            text-decoration: none;
+            border: 8px solid rgb(79, 237, 79);;
+            background-color: rgb(79, 237, 79);
+            border-radius: 5px;
+            color: white;
+            position: relative;
+            top: 20px;
+            font-weight: 700;
+           
+
+           
+        }
+        
+        @media screen and (max-width: 400px){
+            .grid{
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+   
+    <div class="nav">
+        <div class="items">
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE-Logo-1.webp" alt="" width="175px">
+        </div>
+        <div class="list">
+            <ul>
+                <li>products</li>
+                <li>pricing</li>
+                <li>resources</li>
+                <li>about us</li>
+                <li>security and compliance</li>
+                <li><img src="data:image/jpeg;base64,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"
+                        alt="" width="50px" height="50px"></li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="main">
+        <div class="downlaod">
+
+            Download&nbsp;<b> UltraEdit </b> &nbsp; for Windows &nbsp; <img class="image"
+                src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt="" height="40px"
+                width="100px">
+        </div>
+        <div class="para">
+            Download and try UltraEdit before you buy it! This download includes the full Windows version of the text
+            editor.
+
+        </div>
+        <div class="button"><button>download mac or linux version </button></div>
+    </div>
+    <div class="info">
+        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQkjIxzJXnQLyq-gbIO7zjFlstOVHHjw34ZHGqE-z1BI--yMA2Q" alt="" width="64px">
+        <h5>Download UltraEdit</h5>
+        <h6>v2024.0(released 04/19/2024) | Hotfix</h6>
+       
+    </div>
+    <div class="grid">
+        <div class="item"><p class="lg">hindi</p> <p class="hello"> hello</p> <a href="/">download link</a></div>
+        <div class="item"><p class="lg">english</p> <p class="hello"> hello</p><a href="/">download link</a></div>
+        <div class="item"><p class="lg">german</p> <p class="hello"> hello</p><a href="/">download link</a></div>
+        <div class="item"><p class="lg">french</p> <p class="hello"> hello</p><a href="/">download link</a></div>
+        <div class="item"><p class="lg">spanish</p> <p class="hello"> hello</p><a href="/">download link</a></div>
+        <div class="item"><p class="lg">urdu</p> <p class="hello"> hello</p><a href="/">download link</a></div>
+        <div class="item"><p class="lg">arbi</p> <p class="hello"> hello</p><a href="/">download link</a></div>
+        <div class="item"><p class="lg">turkish</p> <p class="hello"> hello</p><a href="/">download link</a></div>
+        <div class="item"><p class="lg">italian</p> <p class="hello"> hello</p><a href="/">download link</a></div>
+        <div class="item"><p class="lg">portug</p> <p class="hello"> hello</p><a href="/">download link</a></div>
+
+    </div> 
+
+
+</body>
+
+</html>
